@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$black: hsl(0,0%, 3%);
+$eggshell: hsl(0,0%, 80%);
+$navy: #191654;
+$green: #43C6AC;
+
+$m100: hsl(0, 0%, 100%);
+$m90: hsl(0, 0%, 90%);
+$m80: hsl(0, 0%, 80%);
+$m60: hsl(0, 0%, 60%);
+$m40: hsl(0, 0%, 40%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section, div {
+    // border: 1px dashed orangered;
+}
+
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    background: linear-gradient(135deg, $green, $navy);
+    background-size: 400vh 400vw;
+    background-position: center center;
+
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:active {
+    background: $eggshell;
+}
+
+.card {
+    position: absolute;
+    top: 10px;
+    margin: 1rem;
+    width: 300px;
+    height: 500px;
+    background: $eggshell;
+    border: none;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.3s ease-out;
+}
+
+.pos-up {
+    transform: translateY(-130vh);
+}
+
+.pos-screen {
+    transform: translateY(0);
+}
+
+.pos-down {
+    transform: translateY(130vh);
+}
+
+.choose-user {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+
+    &__user {
+        width: 200px;
+        height: 60px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        border: 1px solid $navy;
+        border-radius: 30px;
+        background: white;
+
+        margin: 1rem 5px;
+
+        text-decoration: none;
+        cursor: pointer;
+        transition: background 0.3 ease-out;    
+        &__picture {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid $navy;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+    
+            img {
+                width: 50px;
+                height: auto;
+            }
+        }
+    
+        &__name {
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            color: $black;
+            font-size: 16px;
+            padding-right: 1.5rem;
+        }
+    }
+    &__user:active, &__user:hover {
+        background: $eggshell;
+    }
+}
+
+.enter-pin {
+    padding: 1rem;
+    display: grid;
+    grid-template-areas: "dots dots dots"
+                        "a1 a2 a3"
+                        "a4 a5 a6"
+                        "a7 a8 a9"
+                        ". a0 .";
+    grid-gap: 1rem;
+    width: 100%;
+    height: 100%;
+    &__dots{
+        grid-area: dots;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        
+        .dot {
+            width: 10px;
+            height: 10px;
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+    }
+    &__btn {
+        border: 1px solid $navy;
+        border-radius: 50%;
+        background: white;
+        font-size: 1.5rem;
+        line-height: .5rem;
+        padding: 0;
+
+        transition: background 0.3 ease-out;
+    }
+    &__btn:active {
+        background: $eggshell;
+    }
+    #pin-1 {
+        grid-area: a1;
+    }
+    #pin-2 {
+        grid-area: a2;
+    }
+    #pin-3 {
+        grid-area: a3;
+    }
+    #pin-4 {
+        grid-area: a4;
+    }
+    #pin-5 {
+        grid-area: a5;
+    }
+    #pin-6 {
+        grid-area: a6;
+    }
+    #pin-7 {
+        grid-area: a7;
+    }
+    #pin-8 {
+        grid-area: a8;
+    }
+    #pin-9 {
+        grid-area: a9;
+    }
+    #pin-0 {
+        grid-area: a0;
+    }
+
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    max-width: 100%;
+    height: 100%;
+    &__top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 280px;
+        margin: 1rem 0 1rem 0;
+        border-radius: 15px;
+        background: $m90;
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border: 1px solid $navy;
+            border-radius: 15px;
+            background: white;
+            img {
+                width: 30px;
+                height: auto;
+
+            } 
+        }
+    }
+    &__center {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        li {
+            display: block;
+            // width: 100%;
+            height: 2rem;
+            background: $m90;
+            border-top: solid 1px $m60;
+            
+        }
+        li:last-child {
+            border-bottom: solid 1px $m60;
+        }
+    }
+}

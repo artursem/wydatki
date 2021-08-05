@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #43C6AC, #191654);
+  background-size: 400vh 400vw;
+  background-position: center center;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:active {
+  background: #cccccc;
+}
+
+.card {
+  position: absolute;
+  top: 10px;
+  margin: 1rem;
+  width: 300px;
+  height: 500px;
+  background: #cccccc;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-out;
+}
+
+.pos-up {
+  transform: translateY(-130vh);
+}
+
+.pos-screen {
+  transform: translateY(0);
+}
+
+.pos-down {
+  transform: translateY(130vh);
+}
+
+.choose-user {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+.choose-user__user {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #191654;
+  border-radius: 30px;
+  background: white;
+  margin: 1rem 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3 ease-out;
+}
+.choose-user__user__picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #191654;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.choose-user__user__picture img {
+  width: 50px;
+  height: auto;
+}
+.choose-user__user__name {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: #080808;
+  font-size: 16px;
+  padding-right: 1.5rem;
+}
+.choose-user__user:active, .choose-user__user:hover {
+  background: #cccccc;
+}
+
+.enter-pin {
+  padding: 1rem;
+  display: grid;
+  grid-template-areas: "dots dots dots" "a1 a2 a3" "a4 a5 a6" "a7 a8 a9" ". a0 .";
+  grid-gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+.enter-pin__dots {
+  grid-area: dots;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.enter-pin__dots .dot {
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+.enter-pin__btn {
+  border: 1px solid #191654;
+  border-radius: 50%;
+  background: white;
+  font-size: 1.5rem;
+  line-height: 0.5rem;
+  padding: 0;
+  transition: background 0.3 ease-out;
+}
+.enter-pin__btn:active {
+  background: #cccccc;
+}
+.enter-pin #pin-1 {
+  grid-area: a1;
+}
+.enter-pin #pin-2 {
+  grid-area: a2;
+}
+.enter-pin #pin-3 {
+  grid-area: a3;
+}
+.enter-pin #pin-4 {
+  grid-area: a4;
+}
+.enter-pin #pin-5 {
+  grid-area: a5;
+}
+.enter-pin #pin-6 {
+  grid-area: a6;
+}
+.enter-pin #pin-7 {
+  grid-area: a7;
+}
+.enter-pin #pin-8 {
+  grid-area: a8;
+}
+.enter-pin #pin-9 {
+  grid-area: a9;
+}
+.enter-pin #pin-0 {
+  grid-area: a0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 100%;
+  height: 100%;
+}
+.main__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 280px;
+  margin: 1rem 0 1rem 0;
+  border-radius: 15px;
+  background: #e6e6e6;
+}
+.main__top div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #191654;
+  border-radius: 15px;
+  background: white;
+}
+.main__top div img {
+  width: 30px;
+  height: auto;
+}
+.main__center {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.main__center li {
+  display: block;
+  height: 2rem;
+  background: #e6e6e6;
+  border-top: solid 1px #999999;
+}
+.main__center li:last-child {
+  border-bottom: solid 1px #999999;
+}
+
+/*# sourceMappingURL=style.css.map */

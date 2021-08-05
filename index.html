@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>wydatki</title>
+</head>
+<body>
+    <section class="card pos-up" id="panel-user">
+        <div class="choose-user">
+            <button data-user="Agnieszka" class="choose-user__user">
+                <div class="choose-user__user__picture">
+                    <img src="./images/agnieszka.png" alt="Agnieszka">
+                </div>
+                <div class="choose-user__user__name">Agnieszka</div>
+            </button>
+
+            <button data-user="Artur" class="choose-user__user">
+                <div class="choose-user__user__picture">
+                    <img src="./images/artur.png" alt="Artur">
+                </div>
+                <div class="choose-user__user__name">Artur</div>
+            </button>
+        </div>
+    </section>
+
+    <section class="card pos-up" id="panel-pin">
+        <div class="enter-pin">
+            <div class="enter-pin__dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <button class="enter-pin__btn" id="pin-1" data-pin="1">1</button>
+            <button class="enter-pin__btn" id="pin-2" data-pin="2">2</button>
+            <button class="enter-pin__btn" id="pin-3" data-pin="3">3</button>
+            <button class="enter-pin__btn" id="pin-4" data-pin="4">4</button>
+            <button class="enter-pin__btn" id="pin-5" data-pin="5">5</button>
+            <button class="enter-pin__btn" id="pin-6" data-pin="6">6</button>
+            <button class="enter-pin__btn" id="pin-7" data-pin="7">7</button>
+            <button class="enter-pin__btn" id="pin-8" data-pin="8">8</button>
+            <button class="enter-pin__btn" id="pin-9" data-pin="9">9</button>
+            <button class="enter-pin__btn" id="pin-0" data-pin="0">0</button>
+        </div>
+    </section>
+
+    <section class="card pos-screen" id="panel-main">
+        <div class="main">
+            <div class="main__top">
+                <div class="main__top__user">
+                    <img src="./images/agnieszka.png" alt="Agnieszka">
+                </div>
+                <div class="main__top__menu">
+                    =
+                </div>
+                <div class="main__top__add">
+                    +
+                </div>
+            </div>
+            <ul class="main__center">
+                <li>wydatek1</li>
+                <li>wydatek1</li>
+                <li>wydatek1</li>
+                <li>wydatek1</li>
+                <li>wydatek1</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
